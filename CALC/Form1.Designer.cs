@@ -64,7 +64,7 @@
             // 
             // zerobtn
             // 
-            this.zerobtn.Location = new System.Drawing.Point(333, 338);
+            this.zerobtn.Location = new System.Drawing.Point(168, 365);
             this.zerobtn.Name = "zerobtn";
             this.zerobtn.Size = new System.Drawing.Size(56, 49);
             this.zerobtn.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             // pointbtn
             // 
-            this.pointbtn.Location = new System.Drawing.Point(409, 338);
+            this.pointbtn.Location = new System.Drawing.Point(244, 365);
             this.pointbtn.Name = "pointbtn";
             this.pointbtn.Size = new System.Drawing.Size(56, 49);
             this.pointbtn.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             // clearbtn
             // 
-            this.clearbtn.Location = new System.Drawing.Point(486, 338);
+            this.clearbtn.Location = new System.Drawing.Point(321, 365);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(56, 49);
             this.clearbtn.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             // onebtn
             // 
-            this.onebtn.Location = new System.Drawing.Point(333, 268);
+            this.onebtn.Location = new System.Drawing.Point(168, 295);
             this.onebtn.Name = "onebtn";
             this.onebtn.Size = new System.Drawing.Size(56, 49);
             this.onebtn.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             // twobtn
             // 
-            this.twobtn.Location = new System.Drawing.Point(409, 268);
+            this.twobtn.Location = new System.Drawing.Point(244, 295);
             this.twobtn.Name = "twobtn";
             this.twobtn.Size = new System.Drawing.Size(56, 49);
             this.twobtn.TabIndex = 5;
@@ -114,7 +114,7 @@
             // 
             // threebtn
             // 
-            this.threebtn.Location = new System.Drawing.Point(486, 268);
+            this.threebtn.Location = new System.Drawing.Point(321, 295);
             this.threebtn.Name = "threebtn";
             this.threebtn.Size = new System.Drawing.Size(56, 49);
             this.threebtn.TabIndex = 6;
@@ -124,7 +124,7 @@
             // 
             // fourbtn
             // 
-            this.fourbtn.Location = new System.Drawing.Point(333, 200);
+            this.fourbtn.Location = new System.Drawing.Point(168, 227);
             this.fourbtn.Name = "fourbtn";
             this.fourbtn.Size = new System.Drawing.Size(56, 49);
             this.fourbtn.TabIndex = 7;
@@ -134,7 +134,7 @@
             // 
             // fivebtn
             // 
-            this.fivebtn.Location = new System.Drawing.Point(409, 200);
+            this.fivebtn.Location = new System.Drawing.Point(244, 227);
             this.fivebtn.Name = "fivebtn";
             this.fivebtn.Size = new System.Drawing.Size(56, 49);
             this.fivebtn.TabIndex = 8;
@@ -144,7 +144,7 @@
             // 
             // sixbtn
             // 
-            this.sixbtn.Location = new System.Drawing.Point(486, 200);
+            this.sixbtn.Location = new System.Drawing.Point(321, 227);
             this.sixbtn.Name = "sixbtn";
             this.sixbtn.Size = new System.Drawing.Size(56, 49);
             this.sixbtn.TabIndex = 9;
@@ -154,7 +154,7 @@
             // 
             // ninebtn
             // 
-            this.ninebtn.Location = new System.Drawing.Point(486, 128);
+            this.ninebtn.Location = new System.Drawing.Point(321, 155);
             this.ninebtn.Name = "ninebtn";
             this.ninebtn.Size = new System.Drawing.Size(56, 49);
             this.ninebtn.TabIndex = 12;
@@ -164,7 +164,7 @@
             // 
             // eightbtn
             // 
-            this.eightbtn.Location = new System.Drawing.Point(409, 128);
+            this.eightbtn.Location = new System.Drawing.Point(244, 155);
             this.eightbtn.Name = "eightbtn";
             this.eightbtn.Size = new System.Drawing.Size(56, 49);
             this.eightbtn.TabIndex = 11;
@@ -174,7 +174,7 @@
             // 
             // sevenbtn
             // 
-            this.sevenbtn.Location = new System.Drawing.Point(333, 128);
+            this.sevenbtn.Location = new System.Drawing.Point(168, 155);
             this.sevenbtn.Name = "sevenbtn";
             this.sevenbtn.Size = new System.Drawing.Size(56, 49);
             this.sevenbtn.TabIndex = 10;
@@ -184,7 +184,7 @@
             // 
             // multbtn
             // 
-            this.multbtn.Location = new System.Drawing.Point(563, 128);
+            this.multbtn.Location = new System.Drawing.Point(398, 155);
             this.multbtn.Name = "multbtn";
             this.multbtn.Size = new System.Drawing.Size(56, 49);
             this.multbtn.TabIndex = 16;
@@ -194,7 +194,7 @@
             // 
             // divbtn
             // 
-            this.divbtn.Location = new System.Drawing.Point(563, 200);
+            this.divbtn.Location = new System.Drawing.Point(398, 227);
             this.divbtn.Name = "divbtn";
             this.divbtn.Size = new System.Drawing.Size(56, 49);
             this.divbtn.TabIndex = 15;
@@ -204,7 +204,7 @@
             // 
             // plusbtn
             // 
-            this.plusbtn.Location = new System.Drawing.Point(563, 268);
+            this.plusbtn.Location = new System.Drawing.Point(398, 295);
             this.plusbtn.Name = "plusbtn";
             this.plusbtn.Size = new System.Drawing.Size(56, 49);
             this.plusbtn.TabIndex = 14;
@@ -214,7 +214,7 @@
             // 
             // minusbtn
             // 
-            this.minusbtn.Location = new System.Drawing.Point(563, 338);
+            this.minusbtn.Location = new System.Drawing.Point(398, 365);
             this.minusbtn.Name = "minusbtn";
             this.minusbtn.Size = new System.Drawing.Size(56, 49);
             this.minusbtn.TabIndex = 13;
@@ -224,7 +224,7 @@
             // 
             // lftbtn
             // 
-            this.lftbtn.Location = new System.Drawing.Point(639, 128);
+            this.lftbtn.Location = new System.Drawing.Point(474, 155);
             this.lftbtn.Name = "lftbtn";
             this.lftbtn.Size = new System.Drawing.Size(56, 49);
             this.lftbtn.TabIndex = 18;
@@ -234,7 +234,7 @@
             // 
             // rghtbtn
             // 
-            this.rghtbtn.Location = new System.Drawing.Point(639, 198);
+            this.rghtbtn.Location = new System.Drawing.Point(474, 225);
             this.rghtbtn.Name = "rghtbtn";
             this.rghtbtn.Size = new System.Drawing.Size(56, 49);
             this.rghtbtn.TabIndex = 17;
@@ -244,7 +244,7 @@
             // 
             // equalbtn
             // 
-            this.equalbtn.Location = new System.Drawing.Point(639, 268);
+            this.equalbtn.Location = new System.Drawing.Point(474, 295);
             this.equalbtn.Name = "equalbtn";
             this.equalbtn.Size = new System.Drawing.Size(56, 119);
             this.equalbtn.TabIndex = 19;
@@ -266,9 +266,9 @@
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 110);
+            this.groupBox1.Size = new System.Drawing.Size(518, 110);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -285,34 +285,37 @@
             // 
             // sinbtn
             // 
-            this.sinbtn.Location = new System.Drawing.Point(255, 128);
+            this.sinbtn.Location = new System.Drawing.Point(90, 155);
             this.sinbtn.Name = "sinbtn";
             this.sinbtn.Size = new System.Drawing.Size(56, 49);
             this.sinbtn.TabIndex = 23;
             this.sinbtn.Text = "Sin";
             this.sinbtn.UseVisualStyleBackColor = true;
+            this.sinbtn.Click += new System.EventHandler(this.sinbtn_Click);
             // 
             // cosbtn
             // 
-            this.cosbtn.Location = new System.Drawing.Point(255, 200);
+            this.cosbtn.Location = new System.Drawing.Point(90, 227);
             this.cosbtn.Name = "cosbtn";
             this.cosbtn.Size = new System.Drawing.Size(56, 49);
             this.cosbtn.TabIndex = 22;
             this.cosbtn.Text = "Cos";
             this.cosbtn.UseVisualStyleBackColor = true;
+            this.cosbtn.Click += new System.EventHandler(this.cosbtn_Click);
             // 
             // tgbtn
             // 
-            this.tgbtn.Location = new System.Drawing.Point(255, 268);
+            this.tgbtn.Location = new System.Drawing.Point(90, 295);
             this.tgbtn.Name = "tgbtn";
             this.tgbtn.Size = new System.Drawing.Size(56, 49);
             this.tgbtn.TabIndex = 21;
             this.tgbtn.Text = "Tg";
             this.tgbtn.UseVisualStyleBackColor = true;
+            this.tgbtn.Click += new System.EventHandler(this.tgbtn_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(255, 338);
+            this.button1.Location = new System.Drawing.Point(90, 365);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 49);
             this.button1.TabIndex = 27;
@@ -322,7 +325,7 @@
             // 
             // x2btn
             // 
-            this.x2btn.Location = new System.Drawing.Point(177, 200);
+            this.x2btn.Location = new System.Drawing.Point(12, 227);
             this.x2btn.Name = "x2btn";
             this.x2btn.Size = new System.Drawing.Size(56, 49);
             this.x2btn.TabIndex = 26;
@@ -332,16 +335,17 @@
             // 
             // nbtn
             // 
-            this.nbtn.Location = new System.Drawing.Point(177, 128);
+            this.nbtn.Location = new System.Drawing.Point(12, 155);
             this.nbtn.Name = "nbtn";
             this.nbtn.Size = new System.Drawing.Size(56, 49);
             this.nbtn.TabIndex = 25;
             this.nbtn.Text = "N!";
             this.nbtn.UseVisualStyleBackColor = true;
+            this.nbtn.Click += new System.EventHandler(this.nbtn_Click);
             // 
             // pibtn
             // 
-            this.pibtn.Location = new System.Drawing.Point(177, 338);
+            this.pibtn.Location = new System.Drawing.Point(12, 365);
             this.pibtn.Name = "pibtn";
             this.pibtn.Size = new System.Drawing.Size(56, 49);
             this.pibtn.TabIndex = 28;
@@ -351,7 +355,7 @@
             // 
             // ebtn
             // 
-            this.ebtn.Location = new System.Drawing.Point(177, 268);
+            this.ebtn.Location = new System.Drawing.Point(12, 295);
             this.ebtn.Name = "ebtn";
             this.ebtn.Size = new System.Drawing.Size(56, 49);
             this.ebtn.TabIndex = 29;
@@ -363,7 +367,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(541, 423);
             this.Controls.Add(this.ebtn);
             this.Controls.Add(this.pibtn);
             this.Controls.Add(this.button1);
@@ -392,8 +396,10 @@
             this.Controls.Add(this.pointbtn);
             this.Controls.Add(this.zerobtn);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Калькулятор";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
