@@ -11,24 +11,24 @@ namespace CALC
     {
         public decimal result(string input)
         {
-            Stack<string> stack = new Stack<string>();
-            Queue<string> queue = new Queue<string>(ConvertToPFNotation(input));
-            string str = queue.Dequeue();
-            while (queue.Count >= 0)
-            {
-                if (!_operators.Contains(str))
-                {
-                    stack.Push(str);
-                    if (queue.Count == 0) break;
-                    
-                    str = queue.Dequeue();
-                }
-                else
-                {
-                    decimal summ = 0;
-                    try
-                    {
 
+            try
+            {
+                Stack<string> stack = new Stack<string>();
+                Queue<string> queue = new Queue<string>(ConvertToPFNotation(input));
+                string str = queue.Dequeue();
+                while (queue.Count >= 0)
+                {
+                    if (!_operators.Contains(str))
+                    {
+                        stack.Push(str);
+                        if (queue.Count == 0) break;
+
+                        str = queue.Dequeue();
+                    }
+                    else
+                    {
+                        decimal summ = 0;
                         switch (str)
                         {
 
@@ -61,20 +61,22 @@ namespace CALC
                                     break;
                                 }
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    stack.Push(summ.ToString());
-                    if (queue.Count > 0)
-                        str = queue.Dequeue();
-                    else
-                        break;
-                }
 
+                        stack.Push(summ.ToString());
+                        if (queue.Count > 0)
+                            str = queue.Dequeue();
+                        else
+                            break;
+                    }
+
+                }
+                return Convert.ToDecimal(stack.Pop());
             }
-            return Convert.ToDecimal(stack.Pop());
+            catch
+            {
+                MessageBox.Show("Ошибка, неверный ввод");
+            }
+            return 0;
         }
     }
     public class Parser

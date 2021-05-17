@@ -60,6 +60,10 @@ namespace CALC
                     label2.Text = rd["hist"].ToString();
                 }
                 db.closeConnection();
+                db.openConnection();
+                MySqlCommand delete = new MySqlCommand("DELETE FROM `history`", db.getConnection());
+                delete.ExecuteNonQuery();
+                db.closeConnection();
                 label1.Text = ob.result(label1.Text).ToString();
             }
         }
@@ -185,163 +189,204 @@ namespace CALC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string sqrt = label1.Text;
-            string[] last = sqrt.Split('+', '-', '*', '/','(');
-            bool fl=false;
-            int index = 0;
-            for (int i = sqrt.Length - 1; i >= 0; i--)
+            try
             {
-                if ((sqrt[i] == '+') || (sqrt[i] == '-') || (sqrt[i] == '*') || (sqrt[i] == '/') || (sqrt[i] == '('))
+                string sqrt = label1.Text;
+                string[] last = sqrt.Split('+', '-', '*', '/', '(');
+                bool fl = false;
+                int index = 0;
+                for (int i = sqrt.Length - 1; i >= 0; i--)
                 {
-                    index = i;
-                    fl = true;
-                    break;
+                    if ((sqrt[i] == '+') || (sqrt[i] == '-') || (sqrt[i] == '*') || (sqrt[i] == '/') || (sqrt[i] == '('))
+                    {
+                        index = i;
+                        fl = true;
+                        break;
+                    }
                 }
+                if (fl == true)
+                    sqrt = sqrt.Remove(index + 1);
+                else
+                    sqrt = sqrt.Remove(index);
+                string sqr = last.Last();
+                string sqr1 = sqr.Replace(")", "");
+                double a = Convert.ToDouble(sqr1);
+                double sum = Math.Sqrt(a);
+                label1.Text = sqrt + sum.ToString();
             }
-            if (fl == true)
-            sqrt = sqrt.Remove(index + 1);
-            else
-            sqrt = sqrt.Remove(index);
-            string sqr = last.Last();
-            string sqr1 = sqr.Replace(")", "");
-            double a = Convert.ToDouble(sqr1);
-            double sum = Math.Sqrt(a);
-            label1.Text = sqrt + sum.ToString();
-
+            catch
+            {
+                MessageBox.Show("Ошибка, неверный ввод");
+            }
         }
 
         private void x2btn_Click(object sender, EventArgs e)
         {
-            string sqrt = label1.Text;
-            string[] last = sqrt.Split('+', '-', '*', '/', '(');
-            bool fl = false;
-            int index = 0;
-            for (int i = sqrt.Length - 1; i >= 0; i--)
+            try
             {
-                if ((sqrt[i] == '+') || (sqrt[i] == '-') || (sqrt[i] == '*') || (sqrt[i] == '/') || (sqrt[i] == '('))
+                string sqrt = label1.Text;
+                string[] last = sqrt.Split('+', '-', '*', '/', '(');
+                bool fl = false;
+                int index = 0;
+                for (int i = sqrt.Length - 1; i >= 0; i--)
                 {
-                    index = i;
-                    fl = true;
-                    break;
+                    if ((sqrt[i] == '+') || (sqrt[i] == '-') || (sqrt[i] == '*') || (sqrt[i] == '/') || (sqrt[i] == '('))
+                    {
+                        index = i;
+                        fl = true;
+                        break;
+                    }
                 }
+                if (fl == true)
+                    sqrt = sqrt.Remove(index + 1);
+                else
+                    sqrt = sqrt.Remove(index);
+                string sqr = last.Last();
+                string sqr1 = sqr.Replace(")", "");
+                double a = Convert.ToDouble(sqr1);
+                double sum = Math.Pow(a, 2);
+                label1.Text = sqrt + sum.ToString();
             }
-            if (fl == true)
-                sqrt = sqrt.Remove(index + 1);
-            else
-                sqrt = sqrt.Remove(index);
-            string sqr = last.Last();
-            string sqr1 = sqr.Replace(")", "");
-            double a = Convert.ToDouble(sqr1);
-            double sum = Math.Pow(a,2);
-            label1.Text = sqrt + sum.ToString();
+            catch
+            {
+                MessageBox.Show("Ошибка, неверный ввод");
+            }
         }
 
         private void sinbtn_Click(object sender, EventArgs e)
         {
-            string sin = label1.Text;
-            string[] last = sin.Split('+', '-', '*', '/', '(');
-            bool fl = false;
-            int index = 0;
-            for (int i = sin.Length - 1; i >= 0; i--)
+            try
             {
-                if ((sin[i] == '+') || (sin[i] == '-') || (sin[i] == '*') || (sin[i] == '/') || (sin[i] == '('))
+                string sin = label1.Text;
+                string[] last = sin.Split('+', '-', '*', '/', '(');
+                bool fl = false;
+                int index = 0;
+                for (int i = sin.Length - 1; i >= 0; i--)
                 {
-                    index = i;
-                    fl = true;
-                    break;
+                    if ((sin[i] == '+') || (sin[i] == '-') || (sin[i] == '*') || (sin[i] == '/') || (sin[i] == '('))
+                    {
+                        index = i;
+                        fl = true;
+                        break;
+                    }
                 }
+                if (fl == true)
+                    sin = sin.Remove(index + 1);
+                else
+                    sin = sin.Remove(index);
+                string si = last.Last();
+                string sin1 = si.Replace(")", "");
+                double a = Convert.ToDouble(sin1);
+                double sum = Math.Sin(a);
+                label1.Text = sin + sum.ToString();
             }
-            if (fl == true)
-                sin = sin.Remove(index + 1);
-            else
-                sin = sin.Remove(index);
-            string si = last.Last();
-            string sin1 = si.Replace(")", "");
-            double a = Convert.ToDouble(sin1);
-            double sum = Math.Sin(a);
-            label1.Text = sin + sum.ToString();
+            catch
+            {
+                MessageBox.Show("Ошибка, неверный ввод");
+            }
         }
 
         private void cosbtn_Click(object sender, EventArgs e)
         {
-            string cos = label1.Text;
-            string[] last = cos.Split('+', '-', '*', '/', '(');
-            bool fl = false;
-            int index = 0;
-            for (int i = cos.Length - 1; i >= 0; i--)
+            try
             {
-                if ((cos[i] == '+') || (cos[i] == '-') || (cos[i] == '*') || (cos[i] == '/') || (cos[i] == '('))
+                string cos = label1.Text;
+                string[] last = cos.Split('+', '-', '*', '/', '(');
+                bool fl = false;
+                int index = 0;
+                for (int i = cos.Length - 1; i >= 0; i--)
                 {
-                    index = i;
-                    fl = true;
-                    break;
+                    if ((cos[i] == '+') || (cos[i] == '-') || (cos[i] == '*') || (cos[i] == '/') || (cos[i] == '('))
+                    {
+                        index = i;
+                        fl = true;
+                        break;
+                    }
                 }
+                if (fl == true)
+                    cos = cos.Remove(index + 1);
+                else
+                    cos = cos.Remove(index);
+                string co = last.Last();
+                string cos1 = co.Replace(")", "");
+                double a = Convert.ToDouble(cos1);
+                double sum = Math.Cos(a);
+                label1.Text = cos + sum.ToString();
             }
-            if (fl == true)
-                cos = cos.Remove(index + 1);
-            else
-                cos = cos.Remove(index);
-            string co = last.Last();
-            string cos1 = co.Replace(")", "");
-            double a = Convert.ToDouble(cos1);
-            double sum = Math.Cos(a);
-            label1.Text = cos + sum.ToString();
+            catch
+            {
+                MessageBox.Show("Ошибка, неверный ввод");
+            }
         }
 
         private void tgbtn_Click(object sender, EventArgs e)
         {
-            string tgn = label1.Text;
-            string[] last = tgn.Split('+', '-', '*', '/', '(');
-            bool fl = false;
-            int index = 0;
-            for (int i = tgn.Length - 1; i >= 0; i--)
+            try
             {
-                if ((tgn[i] == '+') || (tgn[i] == '-') || (tgn[i] == '*') || (tgn[i] == '/') || (tgn[i] == '('))
+                string tgn = label1.Text;
+                string[] last = tgn.Split('+', '-', '*', '/', '(');
+                bool fl = false;
+                int index = 0;
+                for (int i = tgn.Length - 1; i >= 0; i--)
                 {
-                    index = i;
-                    fl = true;
-                    break;
+                    if ((tgn[i] == '+') || (tgn[i] == '-') || (tgn[i] == '*') || (tgn[i] == '/') || (tgn[i] == '('))
+                    {
+                        index = i;
+                        fl = true;
+                        break;
+                    }
                 }
+                if (fl == true)
+                    tgn = tgn.Remove(index + 1);
+                else
+                    tgn = tgn.Remove(index);
+                string tg = last.Last();
+                string tgn1 = tg.Replace(")", "");
+                double a = Convert.ToDouble(tgn1);
+                double sum = Math.Tan(a);
+                label1.Text = tgn + sum.ToString();
             }
-            if (fl == true)
-                tgn = tgn.Remove(index + 1);
-            else
-                tgn = tgn.Remove(index);
-            string tg = last.Last();
-            string tgn1 = tg.Replace(")", "");
-            double a = Convert.ToDouble(tgn1);
-            double sum = Math.Tan(a);
-            label1.Text = tgn + sum.ToString();
+            catch 
+            {
+                MessageBox.Show("Ошибка, неверный ввод");
+            }
         }
 
         private void nbtn_Click(object sender, EventArgs e)
         {
-            string fib = label1.Text;
-            string[] last = fib.Split('+', '-', '*', '/', '(');
-            bool fl = false;
-            int index = 0;
-            for (int i = fib.Length - 1; i >= 0; i--)
+            try
             {
-                if ((fib[i] == '+') || (fib[i] == '-') || (fib[i] == '*') || (fib[i] == '/') || (fib[i] == '('))
+                string fib = label1.Text;
+                string[] last = fib.Split('+', '-', '*', '/', '(');
+                bool fl = false;
+                int index = 0;
+                for (int i = fib.Length - 1; i >= 0; i--)
                 {
-                    index = i;
-                    fl = true;
-                    break;
+                    if ((fib[i] == '+') || (fib[i] == '-') || (fib[i] == '*') || (fib[i] == '/') || (fib[i] == '('))
+                    {
+                        index = i;
+                        fl = true;
+                        break;
+                    }
                 }
+                if (fl == true)
+                    fib = fib.Remove(index + 1);
+                else
+                    fib = fib.Remove(index);
+                string fi = last.Last();
+                string fib1 = fi.Replace(")", "");
+                int a = Convert.ToInt32(fib1);
+                int factorial = 1;
+                for (int i = 2; i <= a; i++)
+                {
+                    factorial *= i;
+                }
+                label1.Text = fib + factorial.ToString();
             }
-            if (fl == true)
-                fib = fib.Remove(index + 1);
-            else
-                fib = fib.Remove(index);
-            string fi = last.Last();
-            string fib1 = fi.Replace(")", "");
-            int a = Convert.ToInt32(fib1);  
-            int factorial = 1;   
-            for (int i = 2; i <= a; i++) 
+            catch
             {
-                factorial *= i;
+                MessageBox.Show("Ошибка, неверный ввод");
             }
-            label1.Text = fib + factorial.ToString();
         }
     }
 }
