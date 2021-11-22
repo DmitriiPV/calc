@@ -39,14 +39,14 @@ namespace CALC
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("yes");
+                MessageBox.Show("Добро пожаловать!");
                 this.Hide();
                 Form1 form1 = new Form1();
                 form1.Show();
             }
             else
             {
-                MessageBox.Show("No");
+                MessageBox.Show("Неверные данные для входа!");
             }
         }
     }

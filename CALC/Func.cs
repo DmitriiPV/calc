@@ -186,4 +186,75 @@ namespace CALC
 
 
     }
+    public class ConvertStr : Fnc
+    {
+        public string Calcfnc(string input,string s)
+        {
+            try
+            {
+                string sqrt = input;
+                string[] last = sqrt.Split('+', '-', '*', '/', '(');
+                bool fl = false;
+                int index = 0;
+                for (int i = sqrt.Length - 1; i >= 0; i--)
+                {
+                    if ((sqrt[i] == '+') || (sqrt[i] == '-') || (sqrt[i] == '*') || (sqrt[i] == '/') || (sqrt[i] == '('))
+                    {
+                        index = i;
+                        fl = true;
+                        break;
+                    }
+                }
+                if (fl == true)
+                    sqrt = sqrt.Remove(index + 1);
+                else
+                    sqrt = sqrt.Remove(index);
+                string sqr = last.Last();
+                string sqr1 = sqr.Replace(")", "");
+                return sqrt + cstr(sqr1, s).ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка, неверный ввод");
+            }
+            return "";
+        }
+
+    }
+    public class Fnc
+    {
+        public double cstr(string input,string s)
+        {
+            double a;
+            switch (s)
+            {
+                case "sqrt":
+                    a = Convert.ToDouble(input);
+                    return Math.Sqrt(a);
+                case "x2":
+                    a = Convert.ToDouble(input);
+                    return Math.Pow(a, 2);
+                case "sin":
+                    a = Convert.ToDouble(input);
+                    return Math.Sin(a);
+                case "cos":
+                    a = Convert.ToDouble(input);
+                    return Math.Cos(a);
+                case "tgn":
+                    a = Convert.ToDouble(input);
+                    return Math.Tan(a);
+                case "fib":
+                    a = Convert.ToDouble(input);
+                    int factorial = 1;
+                    for (int i = 2; i <= a; i++)
+                    {
+                        factorial *= i;
+                    }
+                    return factorial;
+                default:
+                    return 0;
+            }
+            
+        }
+    }
 }
