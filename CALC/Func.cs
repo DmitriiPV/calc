@@ -78,37 +78,6 @@ namespace CALC
             }
             return 0;
         }
-        public string Calcfnc(string input, string s)
-        {
-            try
-            {
-                string sqrt = input;
-                string[] last = sqrt.Split('+', '-', '*', '/', '(');
-                bool fl = false;
-                int index = 0;
-                for (int i = sqrt.Length - 1; i >= 0; i--)
-                {
-                    if ((sqrt[i] == '+') || (sqrt[i] == '-') || (sqrt[i] == '*') || (sqrt[i] == '/') || (sqrt[i] == '('))
-                    {
-                        index = i;
-                        fl = true;
-                        break;
-                    }
-                }
-                if (fl == true)
-                    sqrt = sqrt.Remove(index + 1);
-                else
-                    sqrt = sqrt.Remove(index);
-                string sqr = last.Last();
-                string sqr1 = sqr.Replace(")", "");
-                return sqrt + cstr(sqr1, s).ToString();
-            }
-            catch
-            {
-                MessageBox.Show("Ошибка, неверный ввод");
-            }
-            return "";
-        }
     }
     public class Parser
     {
@@ -214,7 +183,47 @@ namespace CALC
             return _outputSeparate.ToArray();
         }
 
-        public double cstr(string input, string s)
+
+
+    }
+    public class ConvertStr : Fnc
+    {
+        public string Calcfnc(string input,string s)
+        {
+            try
+            {
+                string sqrt = input;
+                string[] last = sqrt.Split('+', '-', '*', '/', '(');
+                bool fl = false;
+                int index = 0;
+                for (int i = sqrt.Length - 1; i >= 0; i--)
+                {
+                    if ((sqrt[i] == '+') || (sqrt[i] == '-') || (sqrt[i] == '*') || (sqrt[i] == '/') || (sqrt[i] == '('))
+                    {
+                        index = i;
+                        fl = true;
+                        break;
+                    }
+                }
+                if (fl == true)
+                    sqrt = sqrt.Remove(index + 1);
+                else
+                    sqrt = sqrt.Remove(index);
+                string sqr = last.Last();
+                string sqr1 = sqr.Replace(")", "");
+                return sqrt + cstr(sqr1, s).ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка, неверный ввод");
+            }
+            return "";
+        }
+
+    }
+    public class Fnc
+    {
+        public double cstr(string input,string s)
         {
             double a;
             switch (s)
@@ -245,8 +254,7 @@ namespace CALC
                 default:
                     return 0;
             }
-
+            
         }
-
     }
 }

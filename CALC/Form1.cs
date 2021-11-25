@@ -14,6 +14,7 @@ namespace CALC
     public partial class Form1 : Form
     {
         Calculate ob = new Calculate();
+        ConvertStr cstr = new ConvertStr();
         public Form1()
         {
             InitializeComponent();
@@ -192,7 +193,7 @@ namespace CALC
             string s = "sqrt";
             try
             {
-            label1.Text = ob.Calcfnc(label1.Text,s);
+            label1.Text = cstr.Calcfnc(label1.Text,s);
             }
             catch
             {
@@ -218,7 +219,7 @@ namespace CALC
             string s = "sin";
             try
             {
-                label1.Text = ob.Calcfnc(label1.Text, s);
+                label1.Text = cstr.Calcfnc(label1.Text, s);
             }
             catch
             {
@@ -231,7 +232,7 @@ namespace CALC
             string s = "cos";
             try
             {
-                label1.Text = ob.Calcfnc(label1.Text, s);
+                label1.Text = cstr.Calcfnc(label1.Text, s);
             }
             catch
             {
@@ -244,7 +245,7 @@ namespace CALC
             string s = "tgn";
             try
             {
-                label1.Text = ob.Calcfnc(label1.Text, s);
+                label1.Text = cstr.Calcfnc(label1.Text, s);
             }
             catch
             {
@@ -257,7 +258,7 @@ namespace CALC
             string s = "fib";
             try
             {
-                label1.Text = ob.Calcfnc(label1.Text, s);
+                label1.Text = cstr.Calcfnc(label1.Text, s);
             }
             catch
             {
